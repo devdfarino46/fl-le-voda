@@ -1,0 +1,22 @@
+@import 'base/*';
+
+* {
+  font-family: 'TT Livret Display Trl';
+  font-style: normal;
+}
+
+[class *= "__container"], .container {
+  max-width: 1770px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/// Medias
+/// 540
+/// 740
+/// 940
+/// 1200
+/// 1400
+/// 1770
+
+@import 'blocks/*';

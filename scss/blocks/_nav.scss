@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1200px) {
+    gap: 15px;
+  }
+
+  a {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 119%;
+    text-transform: uppercase;
+    color: #256885;
+    transition: .3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #174558;
+      }
+    }
+  }
+}
