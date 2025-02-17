@@ -20,6 +20,10 @@ body.no-scroll {
   white-space: nowrap;
 }
 
+.hidden {
+  display: none;
+}
+
 .wrapper {
   overflow: hidden;
   display: flex;
@@ -34,6 +38,8 @@ body.no-scroll {
 
 img {
   max-width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 a {

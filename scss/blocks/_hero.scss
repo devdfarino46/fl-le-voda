@@ -1,0 +1,109 @@
+.hero {
+  background: url(../img/hero.webp) no-repeat center;
+  background-size: cover;
+
+  &__container {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: clamp(200px, -12.568rem + 28.65vw, 306px);
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-top: 8px;
+    padding-bottom: 36px;
+
+    @media (max-width: 940px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 740px) {
+      text-align: center;
+      display: flex;
+      font-size: 90px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 540px) {
+      font-size: 70px;
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title-word-1 {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    grid-column: 1 / 3;
+  }
+
+  &__title-word-2 {
+    font-weight: 300;
+    font-size: .69em;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #256885;
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin-top: -.27em;
+    margin-bottom: -0.21em;
+
+    @media (max-width: 740px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title-word-3 {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  &__button {
+    justify-self: flex-end;
+    margin-bottom: clamp(40px, -9.324rem + 13.51vw, 90px);
+    margin-right: clamp(40px, -9.324rem + 13.51vw, 90px);
+    grid-row: 3;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    padding: 24px 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    width: 340px;
+
+    @media (max-width: 1200px) {
+      width: auto;
+    }
+
+    @media (max-width: 940px) {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+
+    @media (max-width: 740px) {
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-top: 40px;
+      font-size: 16px;
+      padding: 16px 28px;
+    }
+  }
+}

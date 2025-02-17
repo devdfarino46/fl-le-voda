@@ -3,6 +3,25 @@ const Ui = {
     document.querySelectorAll('.header').forEach(function (header) {
       const menuBtn = header.querySelector('.header__menu-btn');
       const menu = document.querySelector('.menu');
+      const subHeaderPadding = document.querySelector('.sub-header-padding');
+
+      const setSubHeaderPadding = function () {
+        if (subHeaderPadding && header) {
+          const headerHeight = header.offsetHeight;
+          subHeaderPadding.style.paddingTop = `${headerHeight}px`;
+        }
+      }
+
+      window.addEventListener('scroll', function(ev) {
+        if (window.scrollY > 0) {
+          header.classList.add('--scrolled');
+        } else {
+          header.classList.remove('--scrolled');
+        }
+      });
+
+      setSubHeaderPadding();
+      window.addEventListener('resize', setSubHeaderPadding);
 
       if (menuBtn) {
         menuBtn.addEventListener('click', function () {
@@ -12,7 +31,6 @@ const Ui = {
 
       if (menu) {
         let listener = SwipeListener(menu);
-        
 
         document.addEventListener('click', function (e) {
           if (
