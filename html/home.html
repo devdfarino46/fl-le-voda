@@ -6,47 +6,14 @@
   @@include('blocks/_head.html')
 </head>
 <body>
-  <header class="header">
-    <div class="header__container">
-      <a href="#" class="logo"><img src="data:," 
-          data-src="img/logo.webp" alt="" 
-          class="lazyload">
-      </a>
-
-      <div class="header__right">
-        <nav class="nav">
-          <a href="#">О компании</a>
-          <a href="#">Продукция</a>
-          <a href="#">Партнерская программа</a>
-          <a href="#">Контакты</a>
-        </nav>
-        <a href="tel:+74957777777" class="header__tel-btn">+7 (495) 777 77 77 </a>
-        <div class="header__right-wrap">
-          <a href="tel:+74957777777" class="header__call" title="+7 (495) 777 77 77">
-            <i class="icon-call"></i>
-          </a>
-          <a href="#" class="header__search" title="Поиск">
-            <i class="icon-search-outline"></i>
-          </a>
-          <a href="#" class="header__lang">RU</a>
-        </div>
-
-        <button type="button" class="header__menu-btn" aria-label="Меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="menu">
-    <ul class="menu__nav">
-      <li><a href="#">О компании</a></li>
-      <li><a href="#">Продукция</a></li>
-      <li><a href="#">Партнерская программа</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
+  <div class="wrapper">
+    @@include('blocks/_header.html')
+  
+    <main class="page">
+  
+    </main>
+  
+    @@include('blocks/_footer.html')
   </div>
 
   @@include('blocks/_scripts.html')

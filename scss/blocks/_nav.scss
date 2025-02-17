@@ -7,7 +7,27 @@
     gap: 15px;
   }
 
-  a {
+  &>.rel {
+    position: relative;
+  }
+
+  .contacts-popup-rel {
+
+    .contacts-popup {
+      opacity: 0;
+      transition: .5s ease;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover .contacts-popup {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &>a, &>.rel>a {
     font-family: 'Inter';
     font-weight: 500;
     font-size: 16px;
