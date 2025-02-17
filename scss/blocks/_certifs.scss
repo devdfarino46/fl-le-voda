@@ -35,6 +35,11 @@
   &__left {
     display: flex;
     flex-direction: column;
+    max-width: 871px;
+
+    @media (max-width: 1400px) {
+      max-width: none;
+    }
   }
 
   &__label {
