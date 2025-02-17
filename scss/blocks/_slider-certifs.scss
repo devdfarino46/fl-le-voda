@@ -1,0 +1,83 @@
+.slider-certifs {
+  padding-right: 326px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @media (max-width: 940px) {
+    margin-right: -326px;
+  }
+
+  @media (max-width: 740px) {
+    margin-right: -224px;
+    padding-right: 224px;
+  }
+
+  .swiper {
+    display: flex;
+    margin-left: 0;
+    width: 429px;
+    height: 595px;
+    overflow: visible;
+    user-select: none;
+    
+    @media (max-width: 740px) {
+      width: 310px;
+      height: 427px;
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    transition: .4s ease;
+    border-radius: 6px;
+    
+    &-next {
+      transform-origin: left top;
+      scale: 72.26%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  &__num {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+    color: #DCDCDC;
+    
+    b {
+      color: #256885;
+    }
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    color: #DCDCDC;
+    font-size: 8px;
+    transition: .3s ease;
+
+    &[disabled] {
+      opacity: 0;
+    }
+
+    i::before {
+      width: auto;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #256885;
+      }
+    }
+  }
+}

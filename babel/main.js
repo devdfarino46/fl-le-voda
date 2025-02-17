@@ -54,8 +54,35 @@ const Ui = {
     });
   },
 
+  sliderCertifsInit: function () {
+    document.querySelectorAll('.slider-certifs').forEach(function (sliderCertifs) {
+      const slider = sliderCertifs.querySelector('.swiper');
+      const btnPrev = sliderCertifs.querySelector('.slider-certifs__btn-prev');
+      const btnNext = sliderCertifs.querySelector('.slider-certifs__btn-next');
+      const num = sliderCertifs.querySelector('.slider-certifs__num');
+      
+      const swiper = new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 8,
+        navigation: {
+          nextEl: btnNext,
+          prevEl: btnPrev,
+        },
+        on: {
+          init: function () {
+            num.innerHTML = `<b>${this.activeIndex + 1}</b> / ${this.slides.length}`;
+          },
+          slideChange: function () {
+            num.innerHTML = `<b>${this.activeIndex + 1}</b> / ${this.slides.length}`;
+          }
+        }
+      });
+    });
+  },
+
   init: function () {
     this.headerInit();
+    this.sliderCertifsInit();
   }
 }
 
