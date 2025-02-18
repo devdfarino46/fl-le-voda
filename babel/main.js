@@ -80,9 +80,33 @@ const Ui = {
     });
   },
 
+  typesInit: function () {
+    document.querySelectorAll('.types').forEach(function (types) {
+      const list = types.querySelector('.types__list');
+      const litems = list.querySelectorAll('.types__litem');
+
+      litems.forEach(function (litem, index) {
+        const label = litem.querySelector('.types__litem-label');
+        const dropdown = litem.querySelector('.types__litem-dropdown');
+        const dropdownWrapper = litem.querySelector('.types__litem-dropdown-wrapper');
+
+        label.addEventListener('click', function () {
+
+          if (!litem.classList.contains('--opened')) {
+            dropdown.style.maxHeight = dropdownWrapper.scrollHeight + 'px';
+          } else {
+            dropdown.style.maxHeight = '0px';
+          }
+          litem.classList.toggle('--opened');
+        });
+      });
+    });
+  },
+
   init: function () {
     this.headerInit();
     this.sliderCertifsInit();
+    this.typesInit();
   }
 }
 
