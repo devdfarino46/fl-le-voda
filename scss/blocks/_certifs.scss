@@ -58,6 +58,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 740px) {
+      gap: 5px;
+    }
   }
 
   &__table-row {

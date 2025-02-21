@@ -13,10 +13,15 @@
 
   @media (max-width: 740px) {
     min-height: 400px;
-    background-position: top center;
+    height: 100vh;
+    max-height: 1200px;
+    background-position: center bottom;
+    background-size: 180%;
   }
 
   &__container {
+    display: flex;
+    flex-direction: column;
   }
 
   &__text {
@@ -38,6 +43,33 @@
       margin-left: 0;
       text-align: right;
       font-size: 12px;
+    }
+  }
+
+  &__link {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #256885;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+    i {
+      font-size: 8px;
+      vertical-align: middle;
+      margin-inline-start: 10px;
+
+      &::before {
+        width: auto;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        font-weight: 500;
+      }
     }
   }
 }
