@@ -6,3 +6,6 @@ fontello/**/*
 js/
 *.html
 !html/**/*.html
+
+dist/
+.publish/
